@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="en" class="fixed">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>SmartLock信息管理系统</title>
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/bootstrap-3.3.4.css">
+    <link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/font-awesome.4.6.0.css">
+    <link rel="stylesheet" href="vendor/animate.css/animate.css">
+    <link rel="stylesheet" href="vendor/select2/css/select2.min.css">
+    <link rel="stylesheet" href="vendor/select2/css/select2-bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap_date-picker/css/bootstrap-datepicker3.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap_time-picker/css/timepicker.css">
+    <link rel="stylesheet" href="vendor/bootstrap_color-picker/css/bootstrap-colorpicker.min.css">
+    <link rel="stylesheet" href="stylesheets/css/style.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="page-header">
+            <div class="leftside-header">
+                <div class="logo">
+                    <a href="index.html" class="on-click">
+                        <img alt="logo" src="images/header-logo.png" />
+                    </a>
+                </div>
+                <div id="menu-toggle" class="visible-xs toggle-left-sidebar" data-toggle-class="left-sidebar-open" data-target="html">
+                    <i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+                </div>
+            </div>
+            <div class="rightside-header">
+                <div class="header-middle"></div>
+                <div class="header-section" id="user-headerbox">
+                    <div class="user-header-wrap">
+                        <div class="user-photo">
+                            <img src="images/user-avatar.jpg" alt="小明" />
+                        </div>
+                        <div class="user-info">
+                            <span class="user-name">小明</span>
+                            <span class="user-profile">高级管理员</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-section">
+                    <a href="pages_sign-in.html"><i class="fa fa-sign-out log-out" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="page-body">
+          <div class="left-sidebar">
+              <div class="left-sidebar-header">
+                  <div class="left-sidebar-title">信息管理系统</div>
+                  <div class="left-sidebar-toggle c-hamburger c-hamburger--htla hidden-xs" data-toggle-class="left-sidebar-collapsed" data-target="html">
+                      <span></span>
+                  </div>
+              </div>
+              <div id="left-nav" class="nano">
+                  <div class="nano-content">
+                      <nav>
+                          <ul class="nav" id="main-nav">
+                              <li class="active-item">
+                                  <a href="user.html"><i class="fa fa-home" aria-hidden="true"></i><span>用户管理</span></a>
+                              </li>
+                              <li class=" has-child-item close-item">
+                                  <a>
+                                      <i class="fa fa-sitemap" aria-hidden="true"></i>
+                                      <span>监控管理</span>
+                                  </a>
+                                  <ul class="nav child-nav level-1">
+                                      <li class="has-child-item close-item">
+                                          <a>查看监控</a>
+                                          <ul class="nav child-nav level-2 ">
+                                              <li class="has-child-item close-item">
+                                                  <a>5号楼</a>
+                                                  <ul class="nav child-nav level-2 ">
+                                                      <li class="has-child-item close-item">
+                                                          <a>301</a>
+                                                          <ul class="nav child-nav level-3 ">
+                                                              <li><a href="#">1月</a></li>
+                                                              <li><a href="#">2月</a></li>
+                                                              <li><a href="#">3月</a></li>
+                                                          </ul>
+                                                      </li>
+                                                  </ul>
+                                                  <ul class="nav child-nav level-2 ">
+                                                      <li class="has-child-item close-item">
+                                                          <a>302</a>
+                                                          <ul class="nav child-nav level-3 ">
+                                                              <li><a href="#">1月</a></li>
+                                                              <li><a href="#">2月</a></li>
+                                                              <li><a href="#">3月</a></li>
+                                                          </ul>
+                                                      </li>
+                                                  </ul>
+                                              </li>
+                                              <li class="has-child-item close-item">
+                                                  <a>6号楼</a>
+                                                  <ul class="nav child-nav level-2 ">
+                                                      <li class="has-child-item close-item">
+                                                          <a>301</a>
+                                                          <ul class="nav child-nav level-3 ">
+                                                              <li><a href="#">1月</a></li>
+                                                              <li><a href="#">2月</a></li>
+                                                              <li><a href="#">3月</a></li>
+                                                          </ul>
+                                                      </li>
+                                                  </ul>
+                                                  <ul class="nav child-nav level-2 ">
+                                                      <li class="has-child-item close-item">
+                                                          <a>302</a>
+                                                          <ul class="nav child-nav level-3 ">
+                                                              <li><a href="#">1月</a></li>
+                                                              <li><a href="#">2月</a></li>
+                                                              <li><a href="#">3月</a></li>
+                                                          </ul>
+                                                      </li>
+                                                  </ul>
+                                              </li>
+                                          </ul>
+                                      </li>
+                                      <li class="has-child-item close-item">
+                                          <a >监控记录开关</a>
+                                          <ul class="nav child-nav level-2 ">
+                                              <li class="has-child-item close-item">
+                                                  <a>5号楼</a>
+                                                  <ul class="nav child-nav level-2 ">
+                                                      <li class="has-child-item close-item">
+                                                          <a>301</a>
+                                                          <ul class="nav child-nav level-3 ">
+                                                              <li><a href="monitoring_record.html">1月</a></li>
+                                                              <li><a href="#">2月</a></li>
+                                                              <li><a href="#">3月</a></li>
+                                                          </ul>
+                                                      </li>
+                                                  </ul>
+                                                  <ul class="nav child-nav level-2 ">
+                                                      <li class="has-child-item close-item">
+                                                          <a>302</a>
+                                                          <ul class="nav child-nav level-3 ">
+                                                              <li><a href="#">1月</a></li>
+                                                              <li><a href="#">2月</a></li>
+                                                              <li><a href="#">3月</a></li>
+                                                          </ul>
+                                                      </li>
+                                                  </ul>
+                                              </li>
+                                              <li class="has-child-item close-item">
+                                                  <a>6号楼</a>
+                                                  <ul class="nav child-nav level-2 ">
+                                                      <li class="has-child-item close-item">
+                                                          <a>301</a>
+                                                          <ul class="nav child-nav level-3 ">
+                                                              <li><a href="#">1月</a></li>
+                                                              <li><a href="#">2月</a></li>
+                                                              <li><a href="#">3月</a></li>
+                                                          </ul>
+                                                      </li>
+                                                  </ul>
+                                                  <ul class="nav child-nav level-2 ">
+                                                      <li class="has-child-item close-item">
+                                                          <a>302</a>
+                                                          <ul class="nav child-nav level-3 ">
+                                                              <li><a href="#">1月</a></li>
+                                                              <li><a href="#">2月</a></li>
+                                                              <li><a href="#">3月</a></li>
+                                                          </ul>
+                                                      </li>
+                                                  </ul>
+                                              </li>
+                                          </ul>
+                                      </li>
+                                      <li class="has-child-item close-item">
+                                          <a>下载监控记录</a>
+                                          <ul class="nav child-nav level-2 ">
+                                              <li class="has-child-item close-item">
+                                                  <a>5号楼</a>
+                                                  <ul class="nav child-nav level-2 ">
+                                                      <li class="has-child-item close-item">
+                                                          <a>301</a>
+                                                          <ul class="nav child-nav level-3 ">
+                                                              <li><a href="monitoring_download.html">1月</a></li>
+                                                              <li><a href="#">2月</a></li>
+                                                              <li><a href="#">3月</a></li>
+                                                          </ul>
+                                                      </li>
+                                                  </ul>
+                                                  <ul class="nav child-nav level-2 ">
+                                                      <li class="has-child-item close-item">
+                                                          <a>302</a>
+                                                          <ul class="nav child-nav level-3 ">
+                                                              <li><a href="#">1月</a></li>
+                                                              <li><a href="#">2月</a></li>
+                                                              <li><a href="#">3月</a></li>
+                                                          </ul>
+                                                      </li>
+                                                  </ul>
+                                              </li>
+                                              <li class="has-child-item close-item">
+                                                  <a>6号楼</a>
+                                                  <ul class="nav child-nav level-2 ">
+                                                      <li class="has-child-item close-item">
+                                                          <a>301</a>
+                                                          <ul class="nav child-nav level-3 ">
+                                                              <li><a href="#">1月</a></li>
+                                                              <li><a href="#">2月</a></li>
+                                                              <li><a href="#">3月</a></li>
+                                                          </ul>
+                                                      </li>
+                                                  </ul>
+                                                  <ul class="nav child-nav level-2 ">
+                                                      <li class="has-child-item close-item">
+                                                          <a>302</a>
+                                                          <ul class="nav child-nav level-3 ">
+                                                              <li><a href="#">1月</a></li>
+                                                              <li><a href="#">2月</a></li>
+                                                              <li><a href="#">3月</a></li>
+                                                          </ul>
+                                                      </li>
+                                                  </ul>
+                                              </li>
+                                          </ul>
+                                      </li>
+                                  </ul>
+                              </li>
+                              <li class=" has-child-item close-item">
+                                  <a>
+                                      <i class="fa fa-sitemap" aria-hidden="true"></i>
+                                      <span>云锁记录</span>
+                                  </a>
+                                  <ul class="nav child-nav level-1">
+                                      <li class="has-child-item close-item">
+                                          <a>5号楼</a>
+                                          <ul class="nav child-nav level-2 ">
+                                              <li class="has-child-item close-item">
+                                                  <a>301</a>
+                                                  <ul class="nav child-nav level-3 ">
+                                                      <li><a href="lock_record.html">5月</a></li>
+                                                      <li><a href="#">5月</a></li>
+                                                      <li><a href="#">5月</a></li>
+                                                      <li><a href="#">5月</a></li>
+                                                      <li><a href="#">5月</a></li>
+                                                      <li><a href="#">5月</a></li>
+                                                  </ul>
+                                              </li>
+                                              <li class="has-child-item close-item">
+                                                  <a>302</a>
+                                                  <ul class="nav child-nav level-3 ">
+                                                      <li><a href="#">5月</a></li>
+                                                      <li><a href="#">5月</a></li>
+                                                      <li><a href="#">5月</a></li>
+                                                      <li><a href="#">5月</a></li>
+                                                      <li><a href="#">5月</a></li>
+                                                      <li><a href="#">5月</a></li>
+                                                  </ul>
+                                              </li>
+                                          </ul>
+                                      </li>
+                                      <li class="has-child-item close-item">
+                                          <a>6号楼</a>
+                                          <ul class="nav child-nav level-2 ">
+                                              <li class="has-child-item close-item">
+                                                  <a>301</a>
+                                                  <ul class="nav child-nav level-3 ">
+                                                      <li><a href="#">5月</a></li>
+                                                      <li><a href="#">5月</a></li>
+                                                      <li><a href="#">5月</a></li>
+                                                      <li><a href="#">5月</a></li>
+                                                      <li><a href="#">5月</a></li>
+                                                      <li><a href="#">5月</a></li>
+                                                  </ul>
+                                              </li>
+                                              <li class="has-child-item close-item">
+                                                  <a>302</a>
+                                                  <ul class="nav child-nav level-3 ">
+                                                      <li><a href="#">5月</a></li>
+                                                      <li><a href="#">5月</a></li>
+                                                      <li><a href="#">5月</a></li>
+                                                      <li><a href="#">5月</a></li>
+                                                      <li><a href="#">5月</a></li>
+                                                      <li><a href="#">5月</a></li>
+                                                  </ul>
+                                              </li>
+                                          </ul>
+                                      </li>
+                                  </ul>
+                              </li>
+                              <li class=" has-child-item close-item">
+                                  <a>
+                                      <i class="fa fa-sitemap" aria-hidden="true"></i>
+                                      <span>警报/呼救</span>
+                                  </a>
+                                  <ul class="nav child-nav level-1">
+                                      <li class="has-child-item close-item">
+                                          <a>6号楼</a>
+                                          <ul class="nav child-nav level-2 ">
+                                              <li class="has-child-item close-item">
+                                                  <a>301</a>
+                                                  <ul class="nav child-nav level-3 ">
+                                                      <li><a href="alarm_record.html">1月</a></li>
+                                                      <li><a href="#">2月</a></li>
+                                                      <li><a href="#">3月</a></li>
+                                                  </ul>
+                                              </li>
+                                              <li class="has-child-item close-item">
+                                                  <a>302</a>
+                                                  <ul class="nav child-nav level-3 ">
+                                                      <li><a href="#">1月</a></li>
+                                                      <li><a href="#">2月</a></li>
+                                                      <li><a href="#">3月</a></li>
+                                                  </ul>
+                                              </li>
+                                              <li class="has-child-item close-item">
+                                                  <a>303</a>
+                                                  <ul class="nav child-nav level-3 ">
+                                                      <li><a href="#">1月</a></li>
+                                                      <li><a href="#">2月</a></li>
+                                                      <li><a href="#">3月</a></li>
+                                                  </ul>
+                                              </li>
+                                          </ul>
+                                      </li>
+                                      <li class="has-child-item close-item">
+                                          <a>6号楼</a>
+                                          <ul class="nav child-nav level-2 ">
+                                              <li class="has-child-item close-item">
+                                                  <a>301</a>
+                                                  <ul class="nav child-nav level-3 ">
+                                                      <li><a href="#">1月</a></li>
+                                                      <li><a href="#">2月</a></li>
+                                                      <li><a href="#">3月</a></li>
+                                                  </ul>
+                                              </li>
+                                              <li class="has-child-item close-item">
+                                                  <a>302</a>
+                                                  <ul class="nav child-nav level-3 ">
+                                                      <li><a href="#">1月</a></li>
+                                                      <li><a href="#">2月</a></li>
+                                                      <li><a href="#">3月</a></li>
+                                                  </ul>
+                                              </li>
+                                              <li class="has-child-item close-item">
+                                                  <a>303</a>
+                                                  <ul class="nav child-nav level-3 ">
+                                                      <li><a href="#">1月</a></li>
+                                                      <li><a href="#">2月</a></li>
+                                                      <li><a href="#">3月</a></li>
+                                                  </ul>
+                                              </li>
+                                          </ul>
+                                      </li>
+                                  </ul>
+                              </li>
+                              <li class="has-child-item close-item">
+                                  <a href="help.html"><i class="fa fa-files-o" aria-hidden="true"></i><span>帮助中心</span></a>
+                              </li>
+                          </ul>
+                      </nav>
+                  </div>
+              </div>
+          </div>
+            <div class="content">
+                <div class="content-header">
+                    <div class="leftside-content-header">
+                        <ul class="breadcrumbs">
+                            <li><i class="fa fa-copy" aria-hidden="true"></i><a>监控管理</a></li>
+                            <li><a>下载监控记录</a></li>
+                            <li><a>5号楼</a></li>
+                            <li><a>302</a></li>
+                            <li><a>1月</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row animated fadeInUp">
+                    <div class="col-sm-12">
+                        <h4 class="section-subtitle">信息登记表</b></h4>
+                        <div class="panel">
+                            <div class="panel-content">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <form class="form-horizontal form-stripe">
+                                            <div class="form-group">
+                                                <label for="select2-example-basic" class="col-sm-2 control-label">姓名</label>
+                                                <div class="col-sm-10">
+                                                    <select name="country" id="select2-example-basic" class="form-control" style="width: 100%">
+                                                    <optgroup label="请您选择一项">
+                                                        <option value="XW" label="小王">小王</option>
+                                                        <option value="LW1" label="老王1">老王1</option>
+                                                        <option value="LW2" label="老王2">老王2</option>
+                                                        <option value="LW3" label="老王3">老王3</option>
+                                                        <option value="LW4" label="老王4">老王4</option>
+                                                    </optgroup>
+                                                </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="select2-example-multiple" class="col-sm-2 control-label">原因</label>
+                                                <div class="col-sm-10">
+                                                    <select name="country" id="select2-example-multiple" class="form-control" multiple="multiple" style="width: 100%">
+                                                    <optgroup label="请您选择一项或多项">
+                                                        <option value="安全排查" label="安全排查">安全排查</option>
+                                                        <option value="事件取证" label="事件取证">事件取证</option>
+                                                        <option value="个人用途" label="个人用途">个人用途</option>
+                                                        <option value="其他事宜" label="其他事宜">其他事宜</option>
+                                                      </option>
+                                                    </optgroup>
+                                                </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="select2-example-tags" class="col-sm-2 control-label">下载视频的对应时间</label>
+                                                <div class="col-sm-10">
+                                                    <select name="country" id="select2-example-tags" class="form-control select-tag-primary" multiple="multiple" style="width: 100%">
+                                                    <optgroup label="请您选择一项或多项">
+                                                        <option value="AI" label="Anguilla">1月1-5号</option>
+                                                        <option value="AI" label="Anguilla">1月6-10号</option>
+                                                        <option value="AI" label="Anguilla">1月11-15号</option>
+                                                        <option value="AI" label="Anguilla">1月16-20号</option>
+                                                        <option value="AI" label="Anguilla">1月21-25号</option>
+                                                        <option value="AI" label="Anguilla">1月26号-月末</option>
+                                                        <option value="AI" label="Anguilla">2月1-5号</option>
+                                                        <option value="AI" label="Anguilla">2月6-10号</option>
+                                                        <option value="AI" label="Anguilla">2月11-15号</option>
+                                                        <option value="AI" label="Anguilla">2月16-20号</option>
+                                                        <option value="AI" label="Anguilla">2月21-25号</option>
+                                                        <option value="AI" label="Anguilla">2月26号-月末</option>
+                                                        <option value="AI" label="Anguilla">3月1-5号</option>
+                                                        <option value="AI" label="Anguilla">3月6-10号</option>
+                                                        <option value="AI" label="Anguilla">3月11-15号</option>
+                                                        <option value="AI" label="Anguilla">3月16-20号</option>
+                                                        <option value="AI" label="Anguilla">3月21-25号</option>
+                                                        <option value="AI" label="Anguilla">3月26号-月末</option>
+                                                        <option value="AI" label="Anguilla">4月1-5号</option>
+                                                        <option value="AI" label="Anguilla">4月6-10号</option>
+                                                        <option value="AI" label="Anguilla">4月11-15号</option>
+                                                        <option value="AI" label="Anguilla">4月16-20号</option>
+                                                        <option value="AI" label="Anguilla">4月21-25号</option>
+                                                        <option value="AI" label="Anguilla">4月26号-月末</option>
+                                                    </optgroup>
+
+                                                </select>
+                                                    <span class="help-block"><i class="fa fa-info-circle mr-xs"></i>为了减轻网站负担，我们将每月的录像视频按五天为一个压缩包，您下载到本地
+                                                      后可以解压，解压包里有每天的录像视频。请正确下载你所需的录像视频，防止错下误下🙂</span>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-sm-10">
+                                                <center><button class="btn btn-wide btn-success">我已准确填写信息登记表，即将下载</button></center>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row animated fadeInUp">
+                  <center><h3 class="text-xl">近期监控视频观看</b></h3></center>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="panel widget-post ">
+                            <div class="panel-header">
+                                <img alt="Beach" src="images/post/adventure.jpg" />
+                                <div class="main-tag"><span>昨天</span></div>
+                            </div>
+                            <div class="panel-content">
+                                <div class="text text-center">
+                                    <h4>昨天 </h4>
+                                    <h6 class="color-muted">该视频在用户允许情况下录制</h6>
+                                    <hr class="mv-xs mh-lg" />
+                                    <p>15：30-16：40</p>
+                                </div>
+                            </div>
+                            <div class="panel-footer bg-scale-0 text-center pv-xs"><a href="#">在线观看</a></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="panel widget-post ">
+                            <div class="panel-header">
+                                <img alt="Beach" src="images/post/adventure.jpg" />
+                                <div class="main-tag"><span>前天</span></div>
+                            </div>
+                            <div class="panel-content">
+                                <div class="text text-center">
+                                    <h4>前天</h4>
+                                    <h6 class="color-muted">该视频在用户允许情况下录制</h6>
+                                    <hr class="mv-xs mh-lg" />
+                                    <p>15：30-16：40</p>
+                                </div>
+                            </div>
+                            <div class="panel-footer bg-scale-0 text-center pv-xs"><a href="#">在线观看</a></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="panel widget-post ">
+                            <div class="panel-header">
+                                <img alt="Beach" src="images/post/adventure.jpg" />
+                                <div class="main-tag"><span>大前天</span></div>
+                            </div>
+                            <div class="panel-content">
+                                <div class="text text-center">
+                                    <h4>大前天</h4>
+                                    <h6 class="color-muted">该视频在用户允许情况下录制</h6>
+                                    <hr class="mv-xs mh-lg" />
+                                    <p>15：30-16：40</p>
+                                </div>
+                            </div>
+                            <div class="panel-footer bg-scale-0 text-center pv-xs"><a href="#">在线观看</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/nano-scroller/nano-scroller.js"></script>
+    <script src="javascripts/template-script.min.js"></script>
+    <script src="javascripts/template-init.min.js"></script>
+    <script src="vendor/bootstrap_max-lenght/bootstrap-maxlength.js"></script>
+    <script src="vendor/select2/js/select2.min.js"></script>
+    <script src="vendor/input-masked/inputmask.bundle.min.js"></script>
+    <script src="vendor/input-masked/phone-codes/phone.js"></script>
+    <script src="vendor/bootstrap_date-picker/js/bootstrap-datepicker.min.js"></script>
+    <script src="vendor/bootstrap_time-picker/js/bootstrap-timepicker.js"></script>
+    <script src="vendor/bootstrap_color-picker/js/bootstrap-colorpicker.min.js"></script>
+    <script src="javascripts/examples/forms/advanced.js"></script>
+</body>
+
+</html>
