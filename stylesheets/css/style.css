@@ -2,8 +2,8 @@
 [Master Stylesheet]
 
 Project:    HELSINKI
-Version:    1.0 
-author:     myii-developer 
+Version:    1.0
+author:     myii-developer
 
 -------------------------------------------------------------------------------------
 [Table of contents]
@@ -18,7 +18,7 @@ author:     myii-developer
             4. content
                 5. content-header
             4. right-sidebar
-            
+
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
 html,
 body {
@@ -317,7 +317,7 @@ html.right-sidebar-opened .right-sidebar {
 /*================================================*/
 .page-header {
   background: #004E90;
-  color: #ffffff;
+  /*color: #ffffff;*/
 }
 .page-header .leftside-header {
   display: inline-block;
@@ -4114,6 +4114,7 @@ html.margin-padding .box-padding .box-in {
 
 .section-subtitle {
   margin-bottom: 15px;
+  color: #000;
 }
 
 .section-text {
