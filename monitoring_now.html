@@ -385,7 +385,11 @@
     <script src="js/fz-video.js"></script>
     <script src="js/mui.min.js"></script>
     <script>
-    	
+    	(function(mui){
+        	mui.back()=function(event){
+        		plus.webview.close(mui.currentWebview,"slide-out-right");	
+        	}
+        })(mui);
     </script>
 </body>
 
